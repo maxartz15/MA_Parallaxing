@@ -6,12 +6,20 @@ namespace MA_Toolbox.Parallaxing
     [RequireComponent(typeof(Camera))]
     public class ParallaxCamera : MonoBehaviour
     {
-        public bool moveParallax;
-
+        [SerializeField]
+        private bool moveParallax = true;
         [SerializeField]
         private bool useCulling = true;
         [SerializeField]
-        private bool cullInEditor = false;
+        private bool cullInEditor = true;
+
+        public bool Parallaxing
+        { 
+            get
+            {
+                return moveParallax;
+            }
+        }
 
         public bool Culling
         {
@@ -45,23 +53,24 @@ namespace MA_Toolbox.Parallaxing
             private set;
         }
 
-        [SerializeField, HideInInspector]
-        private Vector3 storedPosition;
-
         private void Update()
         {
             cameraBounds = Camera.main.OrthographicBounds();
         }
 
-        public void SavePosition()
+#if UNITY_EDITOR
+        [SerializeField, HideInInspector]
+        private Vector3 storedPosition = Vector3.zero;
+        public void EditorSavePosition()
         {
-            storedPosition = transform.position;
+            storedPosition = this.transform.position;
         }
 
-        public void RestorePosition()
+        public void EditorRestorePosition()
         {
-            transform.position = storedPosition;
+            this.transform.position = storedPosition;
         }
+#endif
 
         private void OnDrawGizmos()
         {

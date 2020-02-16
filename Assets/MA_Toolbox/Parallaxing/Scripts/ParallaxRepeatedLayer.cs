@@ -54,14 +54,14 @@ namespace MA_Toolbox.Parallaxing
 				return;
 			}
 
-			if (paralaxCamera.moveParallax && !previousMoveParallax)
+			if (paralaxCamera.Parallaxing && !previousMoveParallax)
 			{
 				previousCameraPosition = cameraTransform.position;
 			}
 
-			previousMoveParallax = paralaxCamera.moveParallax;
+			previousMoveParallax = paralaxCamera.Parallaxing;
 
-			if (!Application.isPlaying && !paralaxCamera.moveParallax)
+			if (!Application.isPlaying && !paralaxCamera.Parallaxing)
 			{
 				return;
 			}

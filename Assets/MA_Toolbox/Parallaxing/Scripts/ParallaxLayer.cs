@@ -50,14 +50,14 @@ namespace MA_Toolbox.Parallaxing
 			//Parallaxing.
 			if (layerSetting != null && speedX != 0.0f && speedY != 0.0f)
 			{
-				if (paralaxCamera.moveParallax && !previousMoveParallax)
+				if (paralaxCamera.Parallaxing && !previousMoveParallax)
 				{
 					previousCameraPosition = cameraTransform.position;
 				}
 
-				previousMoveParallax = paralaxCamera.moveParallax;
+				previousMoveParallax = paralaxCamera.Parallaxing;
 
-				if (Application.isPlaying && paralaxCamera.moveParallax)
+				if (/*Application.isPlaying &&*/ paralaxCamera.Parallaxing)
 				{
 					UpdateParallaxing();
 				}

@@ -2,7 +2,7 @@
 
 A tool to setup parallaxing and culling for sprites in Unity.
 
-![](https://maxartz15.com/wp-content/uploads/2020/02/ParallaxingAndCullingView.gif)
+[![Gif](https://maxartz15.com/wp-content/uploads/2020/02/ParallaxingAndCullingView.gif)](https://maxartz15.com/wp-content/uploads/2020/02/ParallaxingAndCullingView.gif)
 
 ### Download unitypackage
 https://github.com/maxartz15/MA_Parallaxing/releases
