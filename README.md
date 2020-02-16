@@ -1,3 +1,5 @@
+[![Image](https://maxartz15.com/wp-content/uploads/2020/02/ParallaxingAndCulling.png)](https://maxartz15.com/wp-content/uploads/2020/02/ParallaxingAndCulling.png)
+
 # MA_Parallaxing
 
 A tool to setup parallaxing and culling for sprites in Unity.
